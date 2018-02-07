@@ -1,0 +1,2 @@
+# StuSchool
+Hibernate Demo
