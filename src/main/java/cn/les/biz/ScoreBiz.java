@@ -16,19 +16,19 @@ public class ScoreBiz {
     public List<StuScore> getAllStudentsScore2() throws Exception {
         ScoreDao dao = new ScoreDao();
 
-        return dao.getAllStudentsScore();
+        return dao.getAllStudentsScore2();
     }
 
     /**
      * 翻页查询成绩信息
      * @param iStart
-     * @param iEnd
+     * @param rows
      * @return
      * @throws Exception
      */
-    public List<StuScore> getAllStudentsScore(int iStart,int iEnd) throws Exception {
+    public List<StuScore> getAllStudentsScore(int iStart,int rows) throws Exception {
         ScoreDao dao = new ScoreDao();
 
-        return dao.getAllStudentsScore();
+        return dao.getAllStudentsScore(iStart,rows);
     }
 }
