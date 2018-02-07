@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="cn.les.entity.Tstudent" table="TSTUDENT" schema="STU">
+        <id name="tno">
+            <column name="TNO" sql-type="varchar2(30)" length="30"/>
+        </id>
+        <property name="tname">
+            <column name="TNAME" sql-type="varchar2(50)" length="50" not-null="true"/>
+        </property>
+        <property name="sex">
+            <column name="SEX" sql-type="char(1)" length="1" not-null="true"/>
+        </property>
+        <property name="birthday">
+            <column name="BIRTHDAY" sql-type="date" not-null="true"/>
+        </property>
+        <property name="height">
+            <column name="HEIGHT" sql-type="number(3)" precision="3" not-null="true"/>
+        </property>
+        <many-to-one name="tclassByCno" class="cn.les.entity.Tclass">
+            <column name="CNO" not-null="true"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>
