@@ -13,7 +13,20 @@ public class ScoreBiz {
      * @return
      * @throws Exception
      */
-    public List<StuScore> getAllStudentsScore() throws Exception {
+    public List<StuScore> getAllStudentsScore2() throws Exception {
+        ScoreDao dao = new ScoreDao();
+
+        return dao.getAllStudentsScore();
+    }
+
+    /**
+     * 翻页查询成绩信息
+     * @param iStart
+     * @param iEnd
+     * @return
+     * @throws Exception
+     */
+    public List<StuScore> getAllStudentsScore(int iStart,int iEnd) throws Exception {
         ScoreDao dao = new ScoreDao();
 
         return dao.getAllStudentsScore();
